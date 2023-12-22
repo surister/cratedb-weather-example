@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["surister <surister98@gmail.com>"]
 readme = "README.md"
-packages = [{include = "cratedb_weather_data"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
