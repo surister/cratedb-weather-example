@@ -1,0 +1,20 @@
+services:
+  weather:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CRATEDB_HOST=crate:4200
+      - CITY_NAME=Vienna
+      - WEATHER_API_KEY= # Put your https://www.weatherapi.com/ api Key!
+      - FETCH_EVERY_S=60
+
+  crate:
+    image: crate:latest
+    ports:
+      - "4200:4200"
+    command: [ "crate",
+               "-Cdiscovery.type=single-node",
+    ]
+    environment:
+      - CRATE_HEAP_SIZE=2g

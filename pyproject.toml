@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cratedb-weather-data"
+version = "0.1.0"
+description = ""
+authors = ["surister <surister98@gmail.com>"]
+readme = "README.md"
+packages = [{include = "cratedb_weather_data"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+crate = {version = "^0.34.0", extras = ["sqlalchemy"]}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
