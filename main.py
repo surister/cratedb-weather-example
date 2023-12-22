@@ -20,7 +20,7 @@ API_KEY = os.getenv('WEATHER_API_KEY')
 CITY = os.getenv('CITY_NAME')
 URI = f'https://api.weatherapi.com/v1/current.json?key={API_KEY}&q={CITY}&aqi=no'
 
-RUN_EVERY_SECONDS = 5
+RUN_EVERY_SECONDS = os.getenv('FETCH_EVERY_SECONDS', 60)
 
 # Setup sqlalchemy
 engine = sa.create_engine(f"crate://{CRATEDB_HOST}")
