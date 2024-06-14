@@ -6,7 +6,7 @@ from datetime import datetime
 
 import requests
 import sqlalchemy as sa
-from crate.client.sqlalchemy.types import ObjectType
+from sqlalchemy_cratedb import ObjectType
 
 logging.basicConfig(
     format='[%(asctime)s] [%(levelname)s] [%(filename)s:%(lineno)d] - %(message)s',
